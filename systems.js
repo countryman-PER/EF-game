@@ -47,6 +47,7 @@ function filterEntitiesFor(nameToFilterFor, entities)
   let filteredItems = entities.filter((entity) => {
     if(entity.renderer != undefined)
     {
+      // Cannot access renderer properties when publish in Expo
       //return entity.renderer.type.name == nameToFilterFor;
       return entity.class == nameToFilterFor;
     }
